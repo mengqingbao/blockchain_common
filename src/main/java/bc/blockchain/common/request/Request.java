@@ -7,6 +7,7 @@ import java.util.Map;
 import com.alibaba.fastjson.JSONObject;
 
 import bc.blockchain.message.BcConstrant;
+import bc.blockchain.util.PcWifiMac;
 
 public class Request {
 	
@@ -26,16 +27,20 @@ public class Request {
 	
 	private String sign;
 	
+	private String targetId;
+	
 	private RequestType requestType;
 	public Request() {
 	}
 	public Request(RequestType requestType) {
 		this.setrequestType(requestType);
 		this.putHeader(requestType);
+		PcWifiMac mac=new PcWifiMac();
+		clientId=mac.getLocalMac();
 	}
 
 	public String getClientId() {
-		return clientId;
+		return new PcWifiMac().getLocalMac();
 	}
 
 	public void setClientId(String clientId) {
@@ -103,5 +108,13 @@ public class Request {
 	public Map<String, Object> getData() {
 		return data;
 	}
+	public String getTargetId() {
+		return targetId;
+	}
+	public void setTargetId(String targetId) {
+		this.targetId = targetId;
+	}
+	
+	
 	
 }

@@ -2,6 +2,7 @@ package bc.blockchain.constant;
 
 public class BcConstant {
 	public static final String SERVER_HANDLER = "handlers";
+	public static final String SUCCESS = "200";
 	public static String SERVER_CONFIG="/META-INF/server.properties";
 	//注册客户端
 	public static String CLI_REG="001";
