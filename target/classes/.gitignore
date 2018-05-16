@@ -1,5 +1,7 @@
-/bc/
-/log4j.properties
-/blockchanin_common/
 /META-INF/
+/bao.properties
+/bc/
+/blockchanin_common/
+/log4j.properties
+/package.xml
 /test/
